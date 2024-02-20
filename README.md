@@ -53,3 +53,4 @@ python3 run.py --first-run
 
 
 #### * Uygulama kişisel kullanım içindir..
+#### Lisans: MIT.
