@@ -10,11 +10,7 @@ Fakat cross platform olarak (tüm işletim sistemlerinde) çalışabilmesi için
 Programı tamamladıktan sonra günlük hayatta çokca kullanmaktayım ve herkesin kullanabilmesi ve üzerindeki modüllerden istifade edebilmesi için github'ıma attım.<p>
 Umarım faydasını görürsünüz.. ve sorular yada katkıda bulunmak isterseniz pull request üzerinden case açmaktan çekinmeyin.
 
-### Ekran Görüntüleri
-
-![Main Screen](img/screen1.png)
-
-<p>
+### Ekran Görüntüsü
 
 ![Program Run](img/screen2.png)
 
