@@ -8,6 +8,7 @@ from lib.component_lib import Others
 class LoadWindow:
     __loading_label: tkinter.Label = None
     __loading_window: tkinter.Tk = None
+    __load_is_done = False
 
     @staticmethod
     def init():
@@ -31,7 +32,12 @@ class LoadWindow:
         LoadWindow.__loading_label.update()
 
     @staticmethod
+    def get_loaded():
+        return LoadWindow.__load_is_done
+
+    @staticmethod
     def destroy():
+        LoadWindow.__load_is_done = True
         LoadWindow.update_loading_msg(Messages.APP_STARTING)
         time.sleep(0.5)
         LoadWindow.__loading_window.destroy()

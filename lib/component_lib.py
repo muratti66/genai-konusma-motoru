@@ -1,3 +1,4 @@
+import pygame
 import os
 import platform
 import subprocess
@@ -28,7 +29,6 @@ class Others:
 
     @staticmethod
     def talk_with_python(answer_r: str) -> None:
-        import pygame
         if os.path.exists(FilePaths.ANSWER_TMP_FILE_PATH):
             os.remove(FilePaths.ANSWER_TMP_FILE_PATH)
         save(answer_r, 'tr', file=FilePaths.ANSWER_TMP_FILE_PATH, slow=False)

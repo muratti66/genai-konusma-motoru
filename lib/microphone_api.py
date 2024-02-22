@@ -18,14 +18,16 @@ class MicrophoneAPI:
 
     @staticmethod
     def init(sample_rate: int = Config.MICROPHONE_SAMPLE_RATE):
-        LoadWindow.update_loading_msg(Messages.COMP_STARTING.format(MicrophoneAPI.__name__))
+        if not LoadWindow.get_loaded():
+            LoadWindow.update_loading_msg(Messages.COMP_STARTING.format(MicrophoneAPI.__name__))
         MicrophoneAPI.__sample_rate = sample_rate
         MicrophoneAPI.__frames = []
         MicrophoneAPI.__p = pyaudio.PyAudio()
         MicrophoneAPI.__is_recording = False
         MicrophoneAPI.__process_done = False
         MicrophoneAPI.__lock = threading.Lock()
-        LoadWindow.update_loading_msg(Messages.COMP_STARTED.format(MicrophoneAPI.__name__))
+        if not LoadWindow.get_loaded():
+            LoadWindow.update_loading_msg(Messages.COMP_STARTED.format(MicrophoneAPI.__name__))
 
     @staticmethod
     def start_recording():
