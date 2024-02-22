@@ -8,7 +8,6 @@ from lib.genai_api import GenAI
 from lib.microphone_api import MicrophoneAPI
 from lib.ml_api import MLAPI
 from PIL import Image
-from tkinter import ttk
 
 
 class TalkButton:
@@ -18,8 +17,8 @@ class TalkButton:
     @staticmethod
     def init(root: tkinter.Tk) -> None:
         icon = Others.get_icon_image(FilePaths.VOICE_ICON, (24, 24), Image.LANCZOS)
-        TalkButton.__button = ttk.Button(root, image=icon)
-        TalkButton.__button.grid(row=2, column=2, padx=10, pady=4, ipadx=0, ipady=0, sticky='N')
+        TalkButton.__button = tkinter.Button(root, image=icon, width=40, height=40)
+        TalkButton.__button.grid(row=2, column=2, padx=10, pady=10, ipadx=0, ipady=0, sticky='N')
         TalkButton.__button.image = icon
         print(Messages.COMP_INIT_DONE.format(TalkButton.__name__))
 
