@@ -1,4 +1,5 @@
 import torch
+from components.load_window import LoadWindow
 from conf.config import Config
 from conf.static import Messages
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline, Pipeline
@@ -13,6 +14,7 @@ class MLAPI:
 
     @staticmethod
     def init():
+        LoadWindow.update_loading_msg(Messages.COMP_STARTING.format(MLAPI.__name__))
         if Config.HUGGING_FACE_DOWNLOAD_ALLOW:
             __local_files_only = True
             __force_download = True
@@ -20,7 +22,7 @@ class MLAPI:
             __use_fast = False
 
         MLAPI.__init_speech_to_text()
-        print(Messages.COMP_STARTED.format(MLAPI.__name__))
+        LoadWindow.update_loading_msg(Messages.COMP_STARTED.format(MLAPI.__name__))
 
     @staticmethod
     def __init_speech_to_text() -> None:

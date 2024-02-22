@@ -2,7 +2,6 @@ import os
 import platform
 import subprocess
 import tkinter
-import pygame
 from conf.config import Config
 from conf.static import FilePaths, OSValues
 from PIL import Image, ImageTk
@@ -19,7 +18,7 @@ class Others:
         return ImageTk.PhotoImage(img)
 
     @staticmethod
-    def set_padding(widget: tkinter.Text, padx: int, pady: int):
+    def set_padding(widget: tkinter.Text | tkinter.Label, padx: int, pady: int):
         widget.configure(padx=padx, pady=pady)
 
     @staticmethod
@@ -29,6 +28,7 @@ class Others:
 
     @staticmethod
     def talk_with_python(answer_r: str) -> None:
+        import pygame
         if os.path.exists(FilePaths.ANSWER_TMP_FILE_PATH):
             os.remove(FilePaths.ANSWER_TMP_FILE_PATH)
         save(answer_r, 'tr', file=FilePaths.ANSWER_TMP_FILE_PATH, slow=False)

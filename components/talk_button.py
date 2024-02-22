@@ -25,10 +25,11 @@ class TalkButton:
 
     @staticmethod
     def on_response_click_button(event=None) -> None:
-        question = QuestionTextBox.get_question()
-        if question.strip() == StaticValues.DEFAULT_QUESTION:
+        question = QuestionTextBox.get_question().strip()
+        if question == StaticValues.DEFAULT_QUESTION or question == '':
             return
-        TalkButton.__answer = GenAI.talk(question.strip())
+        QuestionTextBox.write_response(question)
+        TalkButton.__answer = GenAI.talk(question)
         AnswerTextBox.write_response(StaticValues.GEMINI_ANSWER_MSG, TalkButton.__answer)
 
     @staticmethod

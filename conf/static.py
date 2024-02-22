@@ -20,7 +20,8 @@ class StaticValues:
 """.format(AUTHOR)
 
     GEMINI_ANSWER_MSG = '== Gemini Cevabı == \n\n'
-    WINDOW_TITLE = 'Gemini AI Konuşma Motoru    /    Murat B.'
+    MAIN_WINDOW_TITLE = 'Gemini AI Konuşma Motoru    /    Murat B.'
+    LOAD_WINDOW_TITLE = 'Açılıyor...'
     FIRST_RUN_PARAM = '--first-run'
 
 
@@ -35,10 +36,12 @@ class Messages:
     AUDIO_SAVE = 'Audio saved.'
     REC_STARTED = 'Recording started.'
     REC_STOPPED = 'Recording stopped.'
+    COMP_STARTING = '{} starting..'
     COMP_STARTED = '{} started..'
     COMP_STOPPED = '{} stopped.'
     COMP_INIT_DONE = '{} init done..'
-
+    REQ_LOADING = 'Gereksinimler yükleniyor...'
+    APP_STARTING = 'Uygulama başlatılıyor..'
 
 class ShortCuts:
     RETURN = '<Return>'

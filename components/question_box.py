@@ -23,4 +23,3 @@ class QuestionTextBox:
         QuestionTextBox.__entry.config(state=tkinter.NORMAL)
         QuestionTextBox.__entry.delete(1.0, tkinter.END)
         QuestionTextBox.__entry.insert(tkinter.END, text)
-        QuestionTextBox.__entry.config(state=tkinter.DISABLED)

@@ -9,7 +9,7 @@ from lib.component_lib import Others
 
 class RootWindow:
 
-    def __init__(self, ):
+    def __init__(self):
         self.__root: tkinter.Tk = tkinter.Tk()
         self.__init_mw()
         QuestionTextBox.init(self.__root)
@@ -19,8 +19,8 @@ class RootWindow:
         print(Messages.COMP_INIT_DONE.format(RootWindow.__name__))
 
     def __init_mw(self):
-        self.__root.title(StaticValues.WINDOW_TITLE)
-        self.__root.geometry(Config.WINDOW_GEOMETRY)
+        self.__root.title(StaticValues.MAIN_WINDOW_TITLE)
+        self.__root.geometry(Config.MAIN_WINDOW_GEOMETRY)
         self.__root.resizable(False, False)
         self.__root.iconphoto(True, Others.get_icon_image(FilePaths.PROG_ICON, (0, 0), None))
 
