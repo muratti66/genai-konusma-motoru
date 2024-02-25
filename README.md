@@ -15,6 +15,20 @@ Umarım faydasını görürsünüz.. ve sorular yada katkıda bulunmak isterseni
 ![Program Run](img/screen2.png)
 
 
+### Genel Özellikler
+* Basit, kolay ve kestirmelerle pratik hale getirilmiş bir arayüz kullanır.
+* Uygulama ile satır destekli olarak girilen yazıyı gemini ye gönderir ve alınan cevapları satır destekli olarak alt kısımdaki pencerede yayınlar. (satır desteği paste işlemi ile sağlanır.)
+* Mikrafon işaretine basılı tutulduğunda alınan sesli bilgiyi yazıya çevirerek geminiye gönderir alınan cevabı yine sesli olarak bilgisayar üzerinde oynatarak yanıtlar.
+* CTRL+S ile alınan metinsel cevabı sesli cevaba dönüştürür.
+
+### Altyapı
+* Python3 interpretter
+* Python tkinter ile basit ve az kaynak tüketen pencere paketi
+* Hugging face whisper-small sesden metine dönüştürme ai modeli (https://huggingface.co/openai/whisper-small)
+* Python google-generativeai (genai) gemini ile api iletişimi paketi
+* Python pyaudio ve pygame mikrafon ve ses işlemleri paketleri
+* Python text-to-speech metinden sese dönüştürme paketi
+
 ### Gereksinimler
 * Python3.10 ve üstü interpretter
 * 1 GB ve üstü disk alanı
