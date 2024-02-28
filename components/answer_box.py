@@ -1,4 +1,5 @@
 import tkinter
+from components.status_box import StatusTextBox
 from conf.static import StaticValues, Messages
 from lib.component_lib import Others
 
@@ -31,3 +32,4 @@ class AnswerTextBox:
         n_tk.clipboard_clear()
         n_tk.clipboard_append(AnswerTextBox.__answer)
         n_tk.destroy()
+        StatusTextBox.write_response(Messages.COPY_TO_CLIPBOARD)

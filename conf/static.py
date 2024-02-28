@@ -51,6 +51,7 @@ class Messages:
     TEXT_TO_GENAI = 'Soru Gemini\'ye gönderiliyor..'
     ANSWER_FROM_GENAI = 'Cevap Geminiden alındı.'
     ANSWER_TO_VOICE = 'Cevap seslendirildi.'
+    COPY_TO_CLIPBOARD = 'Cevap panoya kopyalandı.'
 
 
 class ShortCuts:

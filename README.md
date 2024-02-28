@@ -20,6 +20,7 @@ Umarım faydasını görürsünüz.. ve sorular yada katkıda bulunmak isterseni
 * Uygulama ile satır destekli olarak girilen yazıyı gemini ye gönderir ve alınan cevapları satır destekli olarak alt kısımdaki pencerede yayınlar. (satır desteği paste işlemi ile sağlanır.)
 * Mikrafon işaretine basılı tutulduğunda alınan sesli bilgiyi yazıya çevirerek geminiye gönderir alınan cevabı yine sesli olarak bilgisayar üzerinde oynatarak yanıtlar.
 * CTRL+S ile alınan metinsel cevabı sesli cevaba dönüştürür.
+* CTRL+C ile alınan metinsel cevabı panoya kopyalar.
 
 ### Altyapı
 * Python3 interpretter
