@@ -12,7 +12,7 @@ Umarım faydasını görürsünüz.. ve sorular yada katkıda bulunmak isterseni
 
 ### Ekran Görüntüsü
 
-![Program Run](img/screen2.png)
+![Program Run](img/screen.png)
 
 
 ### Genel Özellikler
