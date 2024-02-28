@@ -22,6 +22,7 @@ class StaticValues:
     GEMINI_ANSWER_MSG = '== Gemini Cevabı == \n\n'
     MAIN_WINDOW_TITLE = 'Gemini AI Konuşma Motoru    /    Murat B.'
     LOAD_WINDOW_TITLE = 'Açılıyor...'
+    STATUS_PREFIX = 'DURUM: '
     FIRST_RUN_PARAM = '--first-run'
 
 
@@ -42,10 +43,20 @@ class Messages:
     COMP_INIT_DONE = '{} init tamamlandı..'
     REQ_LOADING = 'Gereksinimler yükleniyor...'
     APP_STARTING = 'Uygulama başlatılıyor..'
+    APP_STARTED = 'Uygulama başlatıldı.'
+    VOICE_LISTENING = 'Soru mikrafondan dinleniyor..'
+    VOICE_LISTENED = 'Dinleme tamamlandı.'
+    VOICE_TO_TEXT = 'Ses metine çeviriliyor..'
+    VOICE_TO_TEXT_DONE = 'Ses metine çevirildi.'
+    TEXT_TO_GENAI = 'Soru Gemini\'ye gönderiliyor..'
+    ANSWER_FROM_GENAI = 'Cevap Geminiden alındı.'
+    ANSWER_TO_VOICE = 'Cevap seslendirildi.'
+
 
 class ShortCuts:
     RETURN = '<Return>'
     CMD_S = '<Command-s>'
+    CMD_C = '<Command-c>'
     BTN_PRESS = '<ButtonPress>'
     BTN_RELEASE = '<ButtonRelease>'
 

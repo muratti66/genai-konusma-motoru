@@ -1,6 +1,7 @@
 import tkinter
 from components.answer_box import AnswerTextBox
 from components.question_box import QuestionTextBox
+from components.status_box import StatusTextBox
 from components.talk_button import TalkButton
 from conf.config import Config
 from conf.static import Messages, StaticValues, FilePaths, ShortCuts
@@ -15,6 +16,7 @@ class RootWindow:
         QuestionTextBox.init(self.__root)
         TalkButton.init(self.__root)
         AnswerTextBox.init(self.__root)
+        StatusTextBox.init(self.__root)
         self.__init_shortcuts()
         print(Messages.COMP_INIT_DONE.format(RootWindow.__name__))
 
@@ -26,6 +28,7 @@ class RootWindow:
 
     def __init_shortcuts(self):
         self.__root.bind(ShortCuts.RETURN, TalkButton.on_response_click_button)
+        self.__root.bind(ShortCuts.CMD_C, AnswerTextBox.answer_to_clipboard)
         self.__root.bind(ShortCuts.CMD_S, TalkButton.to_voice_click_button)
         TalkButton.get_button().bind(ShortCuts.BTN_PRESS, TalkButton.on_button_press)
         TalkButton.get_button().bind(ShortCuts.BTN_RELEASE, TalkButton.on_button_release)

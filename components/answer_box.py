@@ -17,9 +17,17 @@ class AnswerTextBox:
         print(Messages.COMP_INIT_DONE.format(AnswerTextBox.__name__))
 
     @staticmethod
-    def write_response(suffix: str, text: str) -> None:
+    def write_response(prefix: str, text: str) -> None:
         AnswerTextBox.__answer = text
         AnswerTextBox.__output.config(state=tkinter.NORMAL)
         AnswerTextBox.__output.delete(1.0, tkinter.END)
-        AnswerTextBox.__output.insert(tkinter.END, suffix + text)
+        AnswerTextBox.__output.insert(tkinter.END, prefix + text)
         AnswerTextBox.__output.config(state=tkinter.DISABLED)
+        AnswerTextBox.__output.update()
+
+    @staticmethod
+    def answer_to_clipboard(event=None):
+        n_tk = tkinter.Tk()
+        n_tk.clipboard_clear()
+        n_tk.clipboard_append(AnswerTextBox.__answer)
+        n_tk.destroy()
